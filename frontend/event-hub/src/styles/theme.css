@@ -1,0 +1,40 @@
+/* Dark theme override — activated when <html data-theme="dark"> is set.
+   Applied by Settings pages and on app load from the saved user preference. */
+[data-theme="dark"] {
+  --bg: #12111c;
+  --card: #1b1a29;
+  --text: #e8e6f2;
+  --text-muted: #9c98b5;
+  --border: #2e2c40;
+}
+
+[data-theme="dark"] body { background: var(--bg); color: var(--text); }
+[data-theme="dark"] .navbar { background: var(--card); border-color: var(--border); }
+[data-theme="dark"] .details-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .stat-card-simple,
+[data-theme="dark"] .event-card,
+[data-theme="dark"] .cert-card,
+[data-theme="dark"] .modal,
+[data-theme="dark"] .calendar-cell {
+  background: var(--card);
+  border-color: var(--border);
+}
+[data-theme="dark"] .data-table th,
+[data-theme="dark"] .data-table td { border-color: var(--border); }
+[data-theme="dark"] .form-grid input,
+[data-theme="dark"] .form-grid select,
+[data-theme="dark"] .form-grid textarea,
+[data-theme="dark"] .filter-search,
+[data-theme="dark"] .navbar-search input {
+  background: #24222f;
+  border-color: var(--border);
+  color: var(--text);
+}
+[data-theme="dark"] .sidebar-backdrop { background: rgba(0,0,0,0.6); }
+[data-theme="dark"] .cert-id-row,
+[data-theme="dark"] .notif-item.unread,
+[data-theme="dark"] .chip { background: #24222f; }
+[data-theme="dark"] .chip { border-color: var(--border); color: var(--text-muted); }
+[data-theme="dark"] .notif-panel { background: var(--card); }
+[data-theme="dark"] .notif-item { border-color: var(--border); }

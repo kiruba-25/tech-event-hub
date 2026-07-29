@@ -1,0 +1,42 @@
+.event-hero {
+  background: linear-gradient(135deg, #0f172a, #4c1d95);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+}
+.event-hero-tag {
+  background: rgba(255,255,255,0.15);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.event-hero h1 { margin: 0.6rem 0 0.4rem; font-size: 1.6rem; }
+.event-hero p { color: #cbd5e1; max-width: 600px; }
+.event-hero-meta { display: flex; gap: 1.2rem; margin-top: 1rem; font-size: 0.85rem; flex-wrap: wrap; }
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.2rem;
+  overflow-x: auto;
+}
+.tabs button {
+  background: none;
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.tabs button.active { color: var(--purple); border-color: var(--purple); }
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.2rem;
+}

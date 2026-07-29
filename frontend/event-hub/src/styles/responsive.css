@@ -1,0 +1,122 @@
+/* ===== Tablet (<=1024px) ===== */
+@media (max-width: 1024px) {
+  .stats-grid, .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .details-grid, .admin-grid { grid-template-columns: 1fr; }
+  .navbar-search { display: none; }
+}
+
+/* ===== Small tablet / large phone (<=768px) ===== */
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    transition: left 0.25s ease;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+  }
+  .sidebar.sidebar-open { left: 0; }
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 30;
+  }
+
+  .page-content { padding: 1.1rem; }
+  .stats-grid, .admin-stats-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .events-grid { grid-template-columns: 1fr 1fr; }
+  .navbar { padding: 0.8rem 1rem; }
+  .navbar-title h1 { font-size: 1rem; }
+
+  .login-page { flex-direction: column; padding: 2rem 1.4rem; justify-content: center; text-align: center; }
+  .login-left { padding: 0; margin-bottom: 2rem; max-width: 100%; }
+  .login-left h1 { font-size: 2rem; margin-left: auto; margin-right: auto; }
+  .login-left p { margin-left: auto; margin-right: auto; }
+  .login-badges { justify-content: center; flex-wrap: wrap; }
+  .login-brand { justify-content: center; }
+  .login-right { width: 100%; }
+  .login-card { max-width: 420px; margin: 0 auto; }
+  .login-page::before { width: 380px; height: 380px; top: -140px; left: -80px; }
+  .login-page::after { width: 340px; height: 340px; bottom: -140px; right: -80px; }
+
+  .calendar-cell { min-height: 60px; font-size: 0.65rem; }
+}
+
+/* ===== Mobile (<=480px) ===== */
+@media (max-width: 480px) {
+  .stats-grid, .admin-stats-grid, .events-grid { grid-template-columns: 1fr; }
+  .stat-card { padding: 1rem; }
+  .navbar-avatar { width: 30px; height: 30px; font-size: 0.7rem; }
+  .event-hero { padding: 1.3rem; }
+  .event-hero h1 { font-size: 1.25rem; }
+  .calendar-grid { gap: 3px; }
+  .calendar-cell { min-height: 46px; padding: 0.3rem; }
+  .cell-event { display: none; } /* show dot only on very small screens */
+  .cell-date { font-size: 0.7rem; }
+  .tabs button { padding: 0.6rem 0.7rem; font-size: 0.8rem; }
+  .role-toggle button { font-size: 0.78rem; }
+}
+
+/* ===== New pages: modal / forms / donut / announcements ===== */
+@media (max-width: 768px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .span-2 { grid-column: span 1; }
+  .donut-wrap { flex-direction: column; align-items: flex-start; }
+  .announcement-head { flex-direction: column; align-items: flex-start; }
+  .modal { padding: 1.2rem; }
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+
+@media (max-width: 480px) {
+  .filter-search { max-width: 100%; width: 100%; }
+  .chip { padding: 0.35rem 0.7rem; font-size: 0.72rem; }
+  .certificate-card { padding: 1rem; }
+}
+
+/* ===== Upcoming Events hero + toolbar ===== */
+@media (max-width: 768px) {
+  .events-hero { flex-direction: column; align-items: flex-start; padding: 1.5rem; }
+  .events-hero-stats { width: 100%; justify-content: space-between; gap: 0.6rem; }
+  .filter-bar-modern { flex-direction: column; align-items: stretch; }
+  .search-wrap { max-width: 100%; }
+  .sort-select { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .events-hero-text h1 { font-size: 1.35rem; }
+  .hero-stat-value { font-size: 1.25rem; }
+  .chip-modern { padding: 0.4rem 0.5rem 0.4rem 0.7rem; font-size: 0.72rem; }
+}
+
+/* ===== Profile page + notification panel ===== */
+@media (max-width: 768px) {
+  .profile-cover-content { flex-direction: column; text-align: center; }
+  .avatar-remove-link { position: static; display: inline-block; margin-top: 0.8rem; }
+  .profile-stats-row { grid-template-columns: 1fr; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .notif-panel { position: fixed; right: 0.6rem; left: 0.6rem; width: auto; top: 64px; }
+}
+
+@media (max-width: 480px) {
+  .avatar-large { width: 76px; height: 76px; font-size: 1.3rem; }
+  .profile-cover { padding: 1.4rem; }
+}
+
+/* ===== My Certificates page ===== */
+@media (max-width: 768px) {
+  .cert-toolbar { flex-direction: column; align-items: stretch; }
+  .cert-search { max-width: 100%; }
+  .cert-total { align-self: flex-start; }
+  .cert-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Login page — small phones ===== */
+@media (max-width: 480px) {
+  .login-left h1 { font-size: 1.6rem; }
+  .login-card { padding: 1.6rem; }
+  .role-toggle button { font-size: 0.78rem; padding: 0.5rem 0.3rem; }
+  .login-page::before, .login-page::after { width: 260px; height: 260px; filter: blur(60px); }
+}
